@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  color: white;
+}
+img {
+  max-width: 100%;
+}
+
+/* Custom Styles */
+.header_tx {
+  font-size: 30px;
+  font-weight: 600;
+}
+.header {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.logo_wrap img {
+  height: 80px;
+  width: auto;
+}
+.wrapper {
+  padding-inline: 60px;
+}
+#search_input {
+  background-color: #000;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: #fff;
+      padding: 5px 10px;
+      min-width: 430px;
+}
+#search_input::placeholder {
+  color: #f9f9f9;
+  opacity: 0.5;
+}
+.search_section, .limit_selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav_section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.limitSele_sort {
+  display: flex;
+  gap: 15px;
+}
+#limit_sel, #sort_by {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.coin_cards {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+      max-height: calc(100vh - 260px);
+    overflow-y: scroll;
+}
+.no_data_fnd {
+  text-align: center;
+}
+.crypto_cards_tit {
+  padding-block: 20px;
+  text-align: center;
+}
+.crypt_img_wrap img {
+  height: 35px;
+  width: auto;
+}
+.coin_card {
+  grid-column: span 2 / span 2;
+  padding: 20px;
+  background-color: #2d2d2d;
+  border-radius: 20px;
+}
+.coin_symbol {
+   color: #fff;
+   opacity: 0.3;
+   text-transform: uppercase;
+   font-size: 12px;
+}
+.coin_name {
+  font-size: 20px;
+}
+.coinIm_tit {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.coin_descs {
+  padding-top: 20px;
+}
+.percentage_dec {
+  color: red;
+}
+.percentage_inc {
+  color: green;
+}
+.coin_desc {
+  padding-top: 5px;
+}
+.coin_cards::-webkit-scrollbar {
+  background: white;
+  border-radius: 20px;
+  width: 5px;
+}
+.coin_cards::-webkit-scrollbar-thumb {
+  background: burlywood;
+  width: 3px;
+}
+.error_text {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Media Queries */
+@media(max-width: 1700px) {
+  .coin_card {
+  grid-column: span 3 / span 3;
+  }
+}
+
+@media(max-width: 1400px) {
+  .coin_card {
+  grid-column: span 4 / span 4;
+  }
+}
+
+@media(max-width: 900px) {
+  .coin_card {
+  grid-column: span 6 / span 6;
+  }
+}
+
+@media(max-width: 600px) {
+  .coin_card {
+  grid-column: span 12 / span 12;
+  }
+  .nav_section {
+    flex-direction: column;
+  }
+}
